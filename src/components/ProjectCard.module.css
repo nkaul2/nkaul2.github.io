@@ -1,0 +1,100 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-card);
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  transition: border-color 0.3s;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--color-accent-border-hover);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 12rem;
+  width: 100%;
+}
+
+.imgCover {
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.period {
+  color: var(--color-accent-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.625;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.comingSoonList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.comingSoonItem {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.comingSoonBullet {
+  color: var(--color-bullet);
+  margin-top: 0.125rem;
+}
+
+.link {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-dim);
+  border: 1px solid var(--color-accent-border);
+  color: var(--color-accent-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.link:hover {
+  background: var(--color-accent-dim-hover);
+  color: var(--color-accent-text-hover);
+}

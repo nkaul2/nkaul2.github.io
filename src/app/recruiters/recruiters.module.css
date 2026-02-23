@@ -1,0 +1,130 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 4rem;
+  position: relative;
+}
+
+.glowWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glowOrb {
+  position: absolute;
+  top: 33.333%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: var(--color-glow-bg-sm);
+  border-radius: 50%;
+  filter: blur(64px);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: var(--max-width-narrow);
+  width: 100%;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+.intro {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.subIntro {
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-card);
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  transition: border-color 0.2s, background 0.2s;
+  text-align: left;
+  text-decoration: none;
+}
+
+.linkCard:hover {
+  border-color: var(--color-accent-border);
+  background: var(--color-glass-bg-hover);
+}
+
+.iconBox {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-logo);
+  background: var(--color-accent-dim);
+  border: 1px solid rgba(201, 31, 31, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  color: var(--color-accent-text);
+  font-size: 1.25rem;
+}
+
+.linkMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkLabel {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.linkCard:hover .linkLabel {
+  color: var(--color-accent-text-hover);
+}
+
+.linkDesc {
+  color: var(--color-text-faint);
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+}

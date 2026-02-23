@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import clsx from "clsx";
+import styles from "./Navbar.module.css";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,23 +16,19 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-lg border-b border-white/10">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-white font-bold text-lg tracking-wide hover:text-red-500 transition-colors">
+    <nav className={styles.nav}>
+      <div className={styles.inner}>
+        <Link href="/" className={styles.brand}>
           NK
         </Link>
-        <ul className="flex gap-8">
+        <ul className={styles.links}>
           {navLinks.map(({ href, label }) => {
             const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
             return (
               <li key={href}>
                 <Link
                   href={href}
-                  className={`text-sm font-medium transition-colors duration-200 ${
-                    isActive
-                      ? "text-red-500 border-b-2 border-red-500 pb-0.5"
-                      : "text-gray-300 hover:text-white"
-                  }`}
+                  className={clsx(styles.link, isActive && styles.linkActive)}
                 >
                   {label}
                 </Link>

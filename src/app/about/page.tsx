@@ -2,20 +2,21 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import styles from "./about.module.css";
 
 export default function AboutPage() {
   return (
-    <div className="pt-24 pb-20 px-6">
-      <div className="max-w-5xl mx-auto">
+    <div className={styles.page}>
+      <div className={styles.inner}>
         {/* Page title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className={styles.pageHeader}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">About Me</h1>
-          <div className="w-16 h-1 bg-red-500 rounded-full mx-auto" />
+          <h1 className={styles.pageTitle}>About Me</h1>
+          <div className={styles.accentBar} />
         </motion.div>
 
         {/* Bio section */}
@@ -23,20 +24,20 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-col md:flex-row gap-8 mb-16 p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10"
+          className={styles.bioCard}
         >
-          <div className="flex-shrink-0 flex justify-center">
-            <div className="relative w-48 h-48 rounded-2xl overflow-hidden border-2 border-red-500/30">
+          <div className={styles.photoWrapper}>
+            <div className={styles.photo}>
               <Image
                 src="/images/Main.png"
                 alt="Nikhil Kaul"
                 fill
-                className="object-cover"
+                className={styles.imgCover}
               />
             </div>
           </div>
-          <div className="flex-1 text-gray-300 space-y-4 text-sm md:text-base leading-relaxed">
-            <h2 className="text-2xl font-bold text-white">My name is Nikhil Kaul</h2>
+          <div className={styles.bioText}>
+            <h2 className={styles.bioHeading}>My name is Nikhil Kaul</h2>
             <p>
               I am currently a Software Engineer at Amazon, and have obtained a B.S. in Computer
               Science and a minor in Statistics from NC State University. I was born in Noida, India,
@@ -50,7 +51,7 @@ export default function AboutPage() {
               for over 15 years, and played snare drum in the marching band throughout high school.
             </p>
             <p>When it comes to life, I live by the mantra:</p>
-            <p className="italic text-red-300 border-l-2 border-red-500 pl-4">
+            <p className={styles.quote}>
               &ldquo;Be a better you than you were yesterday...&rdquo;
             </p>
             <p>
@@ -63,7 +64,7 @@ export default function AboutPage() {
         </motion.div>
 
         {/* Photo grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className={styles.photoGrid}>
           {["/images/pic1.jpg", "/images/pic2.jpg", "/images/pic3.jpg"].map((src, i) => (
             <motion.div
               key={src}
@@ -71,10 +72,10 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative h-64 rounded-2xl overflow-hidden border border-white/10"
+              className={styles.photoGridItem}
             >
-              <Image src={src} alt={`Photo ${i + 1}`} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <Image src={src} alt={`Photo ${i + 1}`} fill className={styles.imgCover} />
+              <div className={styles.photoGridOverlay} />
             </motion.div>
           ))}
         </div>

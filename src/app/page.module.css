@@ -1,0 +1,12 @@
+.skillsSection {
+  padding: 5rem 1.5rem;
+}
+
+.skillsInner {
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+}
+
+.heroParagraph {
+  margin-top: 0.5rem;
+}

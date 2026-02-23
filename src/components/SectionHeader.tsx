@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import styles from "./SectionHeader.module.css";
 
 interface SectionHeaderProps {
   title: string;
@@ -13,10 +14,10 @@ export default function SectionHeader({ title }: SectionHeaderProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="text-center mb-12"
+      className={styles.wrapper}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">{title}</h2>
-      <div className="w-16 h-1 bg-red-500 rounded-full mx-auto" />
+      <h2 className={styles.title}>{title}</h2>
+      <div className={styles.accent} />
     </motion.div>
   );
 }

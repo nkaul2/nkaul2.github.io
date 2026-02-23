@@ -1,0 +1,40 @@
+.page {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.inner {
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+}
+
+.experienceSection {
+  margin-bottom: 6rem;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.disclaimer {
+  text-align: center;
+  color: var(--color-text-faint);
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}

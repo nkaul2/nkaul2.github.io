@@ -20,6 +20,34 @@
   --border: rgba(255, 255, 255, 0.1);
   --ring: rgba(201, 31, 31, 0.5);
   --accent: #c91f1f;
+
+  /* Design tokens for CSS modules */
+  --color-accent: #c91f1f;
+  --color-accent-text: #f87171;
+  --color-accent-text-hover: #fca5a5;
+  --color-accent-dim: rgba(201, 31, 31, 0.2);
+  --color-accent-dim-hover: rgba(201, 31, 31, 0.4);
+  --color-accent-border: rgba(201, 31, 31, 0.4);
+  --color-accent-border-hover: rgba(201, 31, 31, 0.3);
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-bg-hover: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-bg-logo: rgba(255, 255, 255, 0.1);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-text-faint: #4b5563;
+  --color-text-dimmed: rgba(255, 255, 255, 0.2);
+  --color-glow-bg: rgba(153, 27, 27, 0.2);
+  --color-glow-bg-sm: rgba(153, 27, 27, 0.15);
+  --color-bullet: #ef4444;
+  --max-width-nav: 72rem;
+  --max-width-page: 64rem;
+  --max-width-hero: 56rem;
+  --max-width-narrow: 42rem;
+  --radius-card: 1rem;
+  --radius-logo: 0.75rem;
+  --radius-sm: 0.5rem;
 }
 
 @layer base {
