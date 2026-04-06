@@ -64,29 +64,6 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
-
-        {/* Earlier experience */}
-        <motion.section
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className={styles.section}
-        >
-          <h2 className={styles.sectionLabel}>Earlier</h2>
-          <ul className={styles.prevList}>
-            <li className={styles.prevItem}>
-              <span className={styles.prevRole}>Undergraduate Researcher</span>
-              <span className={styles.prevCompany}>MXR Lab, NC State</span>
-              <span className={styles.prevPeriod}>Jan 2019 – May 2020</span>
-            </li>
-            <li className={styles.prevItem}>
-              <span className={styles.prevRole}>Clinical Ops &amp; Biometrics Intern</span>
-              <span className={styles.prevCompany}>Roche</span>
-              <span className={styles.prevPeriod}>May – Aug 2019</span>
-            </li>
-          </ul>
-        </motion.section>
-
       </div>
     </div>
   );
