@@ -13,7 +13,7 @@ const earlierRoles = [
   {
     title: "Undergraduate Researcher",
     company: "MXR Lab, NC State",
-    period: "Jan 2019 – May 2020",
+    period: "Jan 2019 - May 2020",
     location: "Raleigh, NC",
     bullets: [
       "Implemented VR body haptics with Arduino, vibration motors, and C# in Unity; authored an SDK for the lab.",
@@ -23,7 +23,7 @@ const earlierRoles = [
   {
     title: "Clinical Ops & Biometrics Intern",
     company: "Roche",
-    period: "May – Aug 2019",
+    period: "May 2019 - Aug 2019",
     location: "Pleasanton, CA",
     bullets: [
       "Data analysis and Tableau dashboards for Roche Diagnostics clinical trial datasets using Python, R, and SAS.",
