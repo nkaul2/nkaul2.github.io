@@ -28,17 +28,4 @@ export const projects: Project[] = [
     linkLabel: "View Project",
     image: "/images/Spotify.png",
   },
-  {
-    title: "Coming Soon",
-    period: "",
-    description: "Currently working on some ideas...",
-    image: "/images/Work-in-Progress.jpg",
-    comingSoon: true,
-    comingSoonItems: [
-      "Twitter Bot with Spotify API",
-      "TensorFlow image processing with dance",
-      "Data Analysis on AirBNB Data",
-      "Game using Stencyl",
-    ],
-  },
 ];

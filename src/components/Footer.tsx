@@ -1,3 +1,6 @@
+"use client";
+
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -6,30 +9,25 @@ export default function Footer() {
       <p className={styles.heading}>Let&apos;s Talk.</p>
       <ul className={styles.linkList}>
         <li>
-          <a href="mailto:nikhil.kaul98@gmail.com" className={styles.contactLink}>
-            nikhil.kaul98@gmail.com
-          </a>
-        </li>
-        <li aria-hidden="true" className={styles.separator}>|</li>
-        <li>
           <a
             href="https://www.linkedin.com/in/nikhil-kaul-00298a115"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.contactLink}
+            className={styles.iconLink}
+            aria-label="LinkedIn"
           >
-            LinkedIn
+            <FaLinkedin />
           </a>
         </li>
-        <li aria-hidden="true" className={styles.separator}>|</li>
         <li>
           <a
             href="https://github.com/nkaul2"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.contactLink}
+            className={styles.iconLink}
+            aria-label="GitHub"
           >
-            GitHub
+            <FaGithub />
           </a>
         </li>
       </ul>

@@ -17,7 +17,6 @@ export default function SectionHeader({ title }: SectionHeaderProps) {
       className={styles.wrapper}
     >
       <h2 className={styles.title}>{title}</h2>
-      <div className={styles.accent} />
     </motion.div>
   );
 }

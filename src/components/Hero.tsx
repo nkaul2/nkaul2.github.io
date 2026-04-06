@@ -14,46 +14,20 @@ interface HeroProps {
 export default function Hero({ title, subtitle, children, fullHeight = true }: HeroProps) {
   return (
     <section className={clsx(styles.section, fullHeight ? styles.sectionFull : styles.sectionCompact)}>
-      {/* Red glow backdrop */}
-      <div className={styles.glowWrapper}>
-        <div className={styles.glowOrb} />
-      </div>
-
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         className={styles.content}
       >
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className={styles.title}
-        >
-          {title}
-        </motion.h1>
+        <h1 className={styles.title}>{title}</h1>
 
         {subtitle && (
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className={styles.subtitle}
-          >
-            {subtitle}
-          </motion.p>
+          <p className={styles.subtitle}>{subtitle}</p>
         )}
 
         {children && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className={styles.children}
-          >
-            {children}
-          </motion.div>
+          <div className={styles.children}>{children}</div>
         )}
       </motion.div>
     </section>

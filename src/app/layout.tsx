@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,11 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-[#0a0a0a] text-white antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="antialiased">
+        <ThemeProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

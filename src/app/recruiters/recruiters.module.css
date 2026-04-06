@@ -5,31 +5,9 @@
   align-items: center;
   justify-content: center;
   padding: 5rem 1.5rem 4rem;
-  position: relative;
-}
-
-.glowWrapper {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.glowOrb {
-  position: absolute;
-  top: 33.333%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  background: var(--color-glow-bg-sm);
-  border-radius: 50%;
-  filter: blur(64px);
 }
 
 .content {
-  position: relative;
-  z-index: 10;
   max-width: var(--max-width-narrow);
   width: 100%;
   text-align: center;
@@ -37,9 +15,10 @@
 
 .heading {
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-text-primary);
-  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
 }
 
 @media (min-width: 768px) {
@@ -49,20 +28,21 @@
 }
 
 .intro {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: var(--color-text-secondary);
   margin-bottom: 0.5rem;
 }
 
 .subIntro {
   color: var(--color-text-muted);
+  font-size: 0.9375rem;
   margin-bottom: 3rem;
 }
 
 .linksGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 @media (min-width: 640px) {
@@ -75,27 +55,25 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.25rem;
+  padding: 1.125rem;
   border-radius: var(--radius-card);
-  background: var(--color-glass-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--color-glass-border);
-  transition: border-color 0.2s, background 0.2s;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  transition: border-color 0.2s;
   text-align: left;
   text-decoration: none;
 }
 
 .linkCard:hover {
-  border-color: var(--color-accent-border);
-  background: var(--color-glass-bg-hover);
+  border-color: var(--color-text-faint);
 }
 
 .iconBox {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: var(--radius-logo);
-  background: var(--color-accent-dim);
-  border: 1px solid rgba(201, 31, 31, 0.3);
+  background: none;
+  border: 1px solid var(--color-card-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,8 +81,8 @@
 }
 
 .icon {
-  color: var(--color-accent-text);
-  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
 }
 
 .linkMeta {
@@ -116,11 +94,6 @@
   color: var(--color-text-primary);
   font-weight: 600;
   font-size: 0.875rem;
-  transition: color 0.2s;
-}
-
-.linkCard:hover .linkLabel {
-  color: var(--color-accent-text-hover);
 }
 
 .linkDesc {

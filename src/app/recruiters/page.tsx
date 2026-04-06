@@ -8,7 +8,7 @@ const links = [
   {
     icon: FaFileAlt,
     label: "Resume",
-    href: "/images/Nikhil_Kaul_Resume.pdf",
+    href: "/images/resume.pdf",
     desc: "References & Transcripts Available Upon Request",
     external: false,
   },
@@ -38,16 +38,11 @@ const links = [
 export default function RecruitersPage() {
   return (
     <div className={styles.page}>
-      {/* Red glow */}
-      <div className={styles.glowWrapper}>
-        <div className={styles.glowOrb} />
-      </div>
-
       <div className={styles.content}>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
         >
           <h1 className={styles.heading}>Recruiters,</h1>
           <p className={styles.intro}>Thank you for visiting my website!</p>
@@ -62,10 +57,9 @@ export default function RecruitersPage() {
               key={label}
               href={href}
               {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-              whileHover={{ scale: 1.03, y: -2 }}
+              transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}
               className={styles.linkCard}
             >
               <div className={styles.iconBox}>

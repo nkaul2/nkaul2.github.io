@@ -1,12 +1,193 @@
-.skillsSection {
-  padding: 5rem 1.5rem;
+.page {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-.skillsInner {
+.inner {
   max-width: var(--max-width-page);
   margin: 0 auto;
 }
 
-.heroParagraph {
-  margin-top: 0.5rem;
+/* Intro */
+.intro {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.introText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .name {
+    font-size: 3.25rem;
+  }
+}
+
+.bio {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  max-width: 36rem;
+}
+
+.photoWrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  .photoWrapper {
+    justify-content: flex-end;
+  }
+}
+
+.photo {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid var(--color-card-border);
+}
+
+@media (min-width: 768px) {
+  .photo {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+.imgCover {
+  object-fit: cover;
+}
+
+.imgContain {
+  width: 100%;
+  height: auto;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 1.75rem;
+}
+
+.sectionLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-bottom: 1rem;
+}
+
+/* Current role card */
+.currentCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.125rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-card-border);
+  background: var(--color-card-bg);
+}
+
+.currentLogo {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-logo);
+  overflow: hidden;
+  border: 1px solid var(--color-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3125rem;
+}
+
+.currentTitle {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.125rem;
+}
+
+.currentMeta {
+  font-size: 0.8125rem;
+  color: var(--color-text-faint);
+  margin-bottom: 0.375rem;
+}
+
+.currentDesc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+/* Earlier list */
+.prevList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prevItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.125rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+@media (min-width: 640px) {
+  .prevItem {
+    grid-template-columns: 14rem 1fr 9rem;
+    align-items: baseline;
+    gap: 0;
+  }
+}
+
+.prevRole {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.prevCompany {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.prevPeriod {
+  font-size: 0.75rem;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+
+  @media (min-width: 640px) {
+    text-align: right;
+  }
 }
